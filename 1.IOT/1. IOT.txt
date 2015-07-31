@@ -1,1 +1,16 @@
-Daniel Celis
+Daniel Celis 
+
+Practica 1.
+
+1. Una variable tipo double tiene un tamaño de 4 bytes, el mismo tamaño de una variable tipo float.
+POdemos concluir que este tipo de variables son iguales y  esto efectivamente es una diferencia con C estandar.
+
+2. 2.1 LiquidCrystal Library: Esta libreria permite controlar e interactuar con pantallas de cristal liquido (Compatibles con la Hitachi HD44780)
+       Un ejemplo de esta libreria es el clasico "Hola Mundo" desplegado en un pantalla de cristal liquido.
+
+   2.2 GSM Library: libreria que permite por medio de la red GSM, hacer muchas de las funciones que hace un telefono GSM.
+       Un ejemplo interesante es el de poder hacer llamadas de voz por medio del arduino a traves de la red GSM. (Requiere un shield especial) 
+
+
+   2.3 WiFi Library: Esta permite conectarse a internet por medio de la red WiFi
+       Un ejemplo de esta libreria permite escanear la red y encontrar los dispositivos conectados a ella.
