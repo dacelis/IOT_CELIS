@@ -14,3 +14,25 @@ POdemos concluir que este tipo de variables son iguales y  esto efectivamente es
 
    2.3 WiFi Library: Esta permite conectarse a internet por medio de la red WiFi
        Un ejemplo de esta libreria permite escanear la red y encontrar los dispositivos conectados a ella.
+
+3. La estructura de un programa Arduino se divide en dos, una parte de setup y una parte de loop.
+
+4. Setup: Esta funcion se llama cada que se alimenta el arduino o se reinicia y se hace ejecuta una sola vez, se usa para inicializar variables, modos del pin, las librerias a usar etc.
+    
+   Loop: Despues de ejecutar setup, esta funcion se ejecuta ciclicamente, permitiendo al programa cambiar y responder, controlando el Arduino.
+
+5. 5.a La funcion setup se ejecuta una sola vez
+
+   5.b La funcion loop se encuentra en un for infinito por tanto se ejecuta infinitamente desde que el Arduino este alimentado.
+
+   5.c Archivos de programa/ Arduino / hardware / arduino / cores / arduino / main.cpp (Para arduino 1.0.5)
+ 
+6. Boolean: ocupa 1 byte en memoria. Guarda un valor de verdadero o falso.
+   
+   Char: ocupa 1 byte en memoria. Guarda un valor caracter, este debe estar escrito entre comillas simples (Cada caracter es un numero codificado entre -128 hasta 127, usando el codigo ASCII).
+
+   Unsigned char: ocupa 1 byte en memoria. Guarda valores entre 0 y 255 que representan un caracter.
+
+   Byte: ocupa 1 byte. Recibe valores numericos entre 0 y 255
+
+   Int: ocupa 2 bytes (4 bytes en otros Boards de Arduino). Guarda valores numericos entre -32768 hasta 32767.
