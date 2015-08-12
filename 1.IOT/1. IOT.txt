@@ -35,4 +35,33 @@ POdemos concluir que este tipo de variables son iguales y  esto efectivamente es
 
    Byte: ocupa 1 byte. Recibe valores numericos entre 0 y 255
 
-   Int: ocupa 2 bytes (4 bytes en otros Boards de Arduino). Guarda valores numericos entre -32768 hasta 32767.
+   Int: ocupa 2 bytes (4 bytes en otros Boards de Arduino). Guarda valores numericos entre -32768 hasta 32767 ciclico (Roll-over)
+
+   Unsigned int: ocupa 2 bytes de memoria, almacena un numero en un rango entre 0 y 65535 ciclico (Roll-over)
+
+   Word: ocupa 2 bytes de memoria, almacena un número rango entre 0 y 65535 como el unsigned int
+
+   Long: Ocupa 4 bytes de memoria, almacena un numeró 2,147,483,648 to 2,147,483,647.
+
+   Unsigned long: Ocupa 4 bytes. Almacena un numero entre 0 to 4,294,967,295
+
+   Float: ocupa 4 bytes. Almacena un numero decimal entre -3.4028235E+38 y 3.4028235E+38
+
+   Double: Ocupa 4 bytes. Tiene las  mismas características de un dato float
+
+   String(char array): ocupa 4 bytes. Almacena una cadena de caracteres 
+
+   String(objects): No ocupa un tamaño en memoria definido. Almacena una cadena de caracteres, pero agrega mejores características para manipular estas, por ejemplo concatenar arreglos, reemplazar subcandenas, buscarlas entre otros.
+
+   Array: ocupa un tamaño en memoria definido. Crea un arreglo (vector) de caracteres o de enteros.
+
+   Void: No ocupa tamaño en memoria. Es un palabra clave para declarar funciones
+
+7. El terminar un string en null (representado por el código ascii 0) es importante para que en las comunicación deje de enviarse caracteres en el momento que termine de escribir mi cadena, de lo contrario seguirá enviando caracteres de espacios de memoria subsecuentes que no son parte de la cadena de caracteres.
+
+8. Los números del 0 al 9 están representados por los códigos ascii del 48 al 57
+
+10. 
+
+
+
