@@ -61,7 +61,131 @@ POdemos concluir que este tipo de variables son iguales y  esto efectivamente es
 
 8. Los números del 0 al 9 están representados por los códigos ascii del 48 al 57
 
-10. 
+10. El Cool Term permite observar la informacion que esta recibiendo el puerto, esta esta en hexadecimal recibe ya sea 30 0D 0A o 31 0D 0A, el arduino por medio del codigo Ascii logra decodificar esta informacion y mostrarla en el monitor (solo la informacion decodificada).
+    OD= Carriage Return (No imprimible); 0A=New line(No imprimible); 30=0 (imprimible); 31=1(imprimible) 
+
+11.Un arreglo se puede definir de cualquiera de las siguientes maneras:
+
+  int myInts[6]; Declaro el arreglo (de tipo entero)  y determino el tamaño que este va a tener
+  int myPins[] = {2, 4, 8, 3, 6}; Declaro el arreglo (de tipo int), no le pongo el tamaño y el programa cuenta el numero de elementos y crea un arreglo de tamaño apropiado
+  int mySensVals[6] = {2, 4, -8, 3, 2}; Declaro el arreglo (de tipo int) y su tamaño, reservo 6 espacios de los cuales solo utilizo 5.
+  char message[6] = "hello"; Declaro el arreglo (de tipo char) y su tamaño, uso los primeros espacios para 5 caracteres y dejo el ultimo espacio para el caracter null.
+
+12. Para acceder a un elemento de un arreglo pongo el nombre del arreglo y la posicion del arreglo que deseo obtener.
+
+   Ejemplo:
+
+     int myArray[10]={9,3,2,4,3,2,7,8,9,11}; defino el arreglo
+     // myArray[9]    contains 11; Se lee la posicion nueve del arreglo (recordar que la primer posicion del arreglo es la posicion 0)
+     // myArray[10]   is invalid and contains random information (other memory address); Posicion del arreglo inexistete, recordar que la primera posicion del arreglo es la posicion 0. 
+
+13. char name[]="Daniel Celis";
+    int contador=0;
+    
+    void setup() {
+    Serial.begin(9600);
+}
+
+    void loop() {
+    Serial.println(name[contador]);
+    contador=contador+1;
+    delay(500);
+    if (contador>=13)
+    while(true){
+    continue;
+}
+}
+
+En Cool Term se puede observar cada letra en hexadecimal seguida de 0D 0A
+OD= Carriage Return (No imprimible); 0A=New line(No imprimible); 44= D; 61=a; 6E=n; 69=i; 65=e; 6C=l; 20=space; 43=C; 65=e; 6C=l; 69=i; 73=s; 00=null.
+    
+14. 
+
+- Igual: x == y (x is equal to y)
+- Diferente: x != y (x is not equal to y)
+- Menor: x <  y (x is less than y)
+- Mayor: x >  y (x is greater than y)
+- Menor o igual: x <= y (x is less than or equal to y)
+- Mayor o igual: x >= y (x is greater than or equal to y)
+
+15. 
+
+- If: 
+
+if (x > 120){ 
+  digitalWrite(LEDpin1, HIGH);
+  digitalWrite(LEDpin2, HIGH); 
+}   
+
+- Else if:
+
+if (pinFiveInput < 500)
+{
+  // do Thing A
+}
+else if (pinFiveInput >= 1000)
+{
+  // do Thing B
+}
+else
+{
+  // do Thing C
+
+- For
+
+void setup()
+{
+  // no setup needed
+}
+
+void loop()
+{
+   for (int i=0; i <= 255; i++){
+      analogWrite(PWMpin, i);
+      delay(10);
+   } 
+}
+
+- Switch Case:
+
+ switch (var) {
+    case 1:
+      //do something when var equals 1
+      break;
+    case 2:
+      //do something when var equals 2
+      break;
+    default: 
+      // if nothing else matches, do the default
+      // default is optional
+  }
+}
+
+- While
+
+var = 0;
+while(var < 200){
+  // do something repetitive 200 times
+  var++;
+}
+
+
+16. El modificador Const sirve para definir una constante, esta es una variable de solo lectura y que en la ejecucion del programa no se puede cambiar su valor, estas no ocupan espacio en memoria lo que optimiza la ejecucion del programa.
+
+17. Al implementarlo con variables int el programa usa 13 bytes en variables globales, pero al definir constantes solo usa 9 bytes, esto evidencia la ventaja de definir constantes para optimizar el uso de la memoria del Arduino.
+
+18. El codigo primero despliega un mensaje pidiendo una letra de la A la F, luego lee la letra ingresada y si es minuscula la pasa a mayuscula, luego a cada letra le asigna en un caso un mensaje respuesta.
+
+19. El programa hace un for que inicia la variable K en cero y va hasta 9, incrementandola de a 1. El programa despliega cuatro expresiones, las dos primeras el valor de K, la tercera K cuando aumenta y la ultima despliega k al cuadrado. 
+
+20. a) Memset lo que hace es completar un bloque de memoria en este caso del arreglo searchList, con un valor en este caso 0, un tamaño de dicho bloque que se defina, en este caso todo el arreglo SearchList.  
+
+b) Sizeof sirve para crear una variable cuyo valor es el tamaño de otra en este caso el tamaño del arreglo searchList.
+   
+c) Sizeof devuelve 200 que es el tamaño del arreglo searchList.
+
+d) La funcion de la palabra resevada Break es salirse del operador While cuando se cumpla la condicion en este caso que encuentre la posicion del arreglo SearcList donde esta el valor objetivo.    
+  
 
 
 
